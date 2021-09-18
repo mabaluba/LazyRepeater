@@ -13,12 +13,25 @@ namespace LazyRepeater
                 int i = -1;
                 Func<char> a = () =>
                 {
-                    i = (i < str.Length-1) ? ++i : 0;
+                    i = (i < str.Length - 1) ? ++i : 0;
                     Console.WriteLine(str[i]);//вывод на консоль возвращаемого значения
                     return str[i];
                 };
                 return a;
 
+                //var ind = str.GetEnumerator();
+                /* return () =>
+                 {
+                     if (!ind.MoveNext())
+                     {
+                         ind.Reset();
+                         ind.MoveNext();
+                     }
+                     return ind.Current; 
+                 };*/
+
+                /*int idx = 0;
+                return () => str[idx++ % str.Length];*/
             }
 
 
