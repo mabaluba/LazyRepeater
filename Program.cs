@@ -11,12 +11,6 @@ namespace LazyRepeater
             static Func<char> MakeLooper(string str)
             {
                 int i = -1;
-                /*Func<char> a = () =>
-                {
-                    i = (i < str.Length - 1) ? ++i : 0;
-                    return str[i];
-                };
-                return a;*/
                 Func<char> a = () =>
                 {
                     i = (i < str.Length-1) ? ++i : 0;
